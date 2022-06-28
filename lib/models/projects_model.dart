@@ -23,7 +23,7 @@ class ProjectModel{
 
   Future<bool> launchLink() async {
 
-    Uri uri = Uri(scheme: scheme, path: projectLink);
+    Uri uri = Uri(scheme: scheme, path: "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" + projectLink);
     if(queryParameters!=null){
       uri = Uri(scheme: scheme, path: projectLink, queryParameters: queryParameters);
     }
