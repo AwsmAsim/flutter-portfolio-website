@@ -101,7 +101,7 @@ class HomePage extends StatelessWidget {
       ),
 
       drawer: S_WIDTH > kMobileWidth ? null : Drawer(
-        child: drawerColumn()
+        child: drawerColumn(context)
       ),
       body: Column(
         children: [
@@ -152,15 +152,15 @@ class HomePage extends StatelessWidget {
     return navigationBarsList;
   }
 
-  Column drawerColumn(){
+  Column drawerColumn(BuildContext context){
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: drawerTabs(),
+      children: drawerTabs(context),
     );
   }
 
 
-  List<Widget> drawerTabs(){
+  List<Widget> drawerTabs(BuildContext context){
     List<Widget> panels = [];
     panels.add(
       Container(
@@ -181,6 +181,7 @@ class HomePage extends StatelessWidget {
               index: i,
               duration: const Duration(seconds: 2),
               curve: Curves.easeInOutCubic);
+          Navigator.pop(context);
         },
         child: Padding(
             padding: const EdgeInsets.all(8.0),
