@@ -1,4 +1,7 @@
-# [https://awsmasim.github.io/portfolio/](Click here to visit Website.)  
+# [Click here to visit Website.](https://awsmasim.github.io/portfolio/)  
+or Visit link: https://awsmasim.github.io/portfolio/  
+
+
 ## Connect with me
 
 <a href = "https://hashnode.com/@AwsmAsim">
