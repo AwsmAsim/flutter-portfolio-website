@@ -7,7 +7,7 @@ class About extends StatelessWidget {
   String about = '''
 I am a final year Computer Science student pursuing Bachelors of Technology from PSIT, Kanpur. 
     \nI have good problem Solving skills, have completed 200+ questions on Leetcode and have  recently cleared HackWithInfy.
-    \nI learnt flutter development from Angela Nu course on Udemy and did some internship expierience in Flutter Developement.
+    \nI learnt flutter development from Angela Yu course on Udemy and did some internship experience in Flutter Development.
     \nI have also learnt NodeJS from udemy and have also worked with other backend technologies including Flask, firebase and Back4App.  
   ''';
 

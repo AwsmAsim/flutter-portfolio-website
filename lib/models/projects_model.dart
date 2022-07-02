@@ -23,7 +23,7 @@ class ProjectModel{
 
   Future<bool> launchLink() async {
 
-    Uri uri = Uri(scheme: scheme, path: "\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b" + projectLink);
+    Uri uri = Uri(scheme: scheme, path: projectLink);
     if(queryParameters!=null){
       uri = Uri(scheme: scheme, path: projectLink, queryParameters: queryParameters);
     }
@@ -32,13 +32,14 @@ class ProjectModel{
       ableToLaunch = result;
     });
 
-    print('projects_model.dart, L31: Not able to launch');
+    // print('projects_model.dart, L31: Not able to launch');
 
     if (!ableToLaunch) return false;
 
       // First we will try to launch it in Web View, if it fails, we will hen proceed to external browser
     if(kIsWeb){
       print(uri.toString());
+      // await launchUrl(Uri.parse('https://' + projectLink));
       js.context.callMethod('open', [uri.toString()]);
     }else{
       if(!await _launchInWebView()){

@@ -85,7 +85,7 @@ class Introduction extends StatelessWidget {
                 Row(
                   children: [
                     Text(
-                      'Welcome to my Protfolio !',
+                      'Welcome to my Portfolio !',
                       style: GoogleFonts.poppins(
                           fontSize: welcomeTextSize),
                     ),
@@ -100,7 +100,7 @@ class Introduction extends StatelessWidget {
                   ],
                 ),
                 AnimatedTextKit(animatedTexts: [
-                  ColorizeAnimatedText('Mohammad \nAsim',
+                  ColorizeAnimatedText('Muhammad \nAsim',
                       textStyle: GoogleFonts.poppins(
                           fontSize: nameSize,
                           fontWeight: FontWeight.bold),

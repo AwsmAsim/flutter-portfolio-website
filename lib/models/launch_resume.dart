@@ -26,8 +26,10 @@ class LaunchResume {
     if (!ableToLaunch) return false;
 
     if(kIsWeb){
+
+      await launchUrl(Uri.parse('https://' + projectLink));
       print(uri.toString());
-      js.context.callMethod('open', [uri.toString()]);
+      // js.context.callMethod('open', [uri.toString()]);
     }else{
       // First we will try to launch it in Web View, if it fails, we will hen proceed to external browser
       if(!await _launchInWebView()){

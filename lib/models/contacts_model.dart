@@ -31,7 +31,7 @@ class ContactsModel {
       ableToLaunch = result;
     });
 
-    print('contacts_model.dart, L31: Not able to launch');
+    // print('contacts_model.dart, L31: Not able to launch');
 
     if (!ableToLaunch) return false;
 
@@ -39,7 +39,8 @@ class ContactsModel {
       // First we will try to launch it in Web View, if it fails, we will hen proceed to external browser
       if(kIsWeb){
         print(uri.toString());
-        js.context.callMethod('open', [uri.toString()]);
+        await launchUrl(Uri.parse('https://' + contactUrl));
+        // js.context.callMethod('open', [uri.toString()]);
       }else{
         if(!await _launchInWebView()){
           if(!await _launchInBrowser()){
