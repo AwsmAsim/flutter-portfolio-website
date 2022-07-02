@@ -39,8 +39,8 @@ class ProjectModel{
       // First we will try to launch it in Web View, if it fails, we will hen proceed to external browser
     if(kIsWeb){
       print(uri.toString());
-      // await launchUrl(Uri.parse('https://' + projectLink));
-      js.context.callMethod('open', [uri.toString()]);
+      await launchUrl(Uri.parse('https://' + projectLink));
+      // js.context.callMethod('open', [uri.toString()]);
     }else{
       if(!await _launchInWebView()){
         if(!await _launchInBrowser()){
