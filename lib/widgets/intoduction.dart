@@ -16,6 +16,8 @@ class Introduction extends StatelessWidget {
     double fontSizeReduction = S_WIDTH > kMobileWidth ? 0 : kMobileFontSizeReduction+10,
     animatedFontSize = 25.0 - fontSizeReduction + 5.0, nameSize = 60.0 - fontSizeReduction*1.2, welcomeTextSize = 35.0 - fontSizeReduction
     ;
+    if(S_WIDTH < kMobileWidth) nameSize -= 10;
+    if(S_WIDTH < kMobileWidth) animatedFontSize += 2;
 
     return Column(
       children: [
@@ -64,6 +66,7 @@ class Introduction extends StatelessWidget {
   }
   
   Widget IntroductionText(BuildContext context, double welcomeTextSize, double nameSize, double animatedFontSize){
+
     return Positioned(
         left: 10.0,
         child: Container(
